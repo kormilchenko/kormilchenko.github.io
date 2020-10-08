@@ -1,0 +1,22 @@
+h1 {color:#33cc99; text-align: center; text-shadow: #006633 0 0 2px; font: 2em Arial, sans-serif;} 
+#bu {color:#ffcc33; background-color: #6633cc; border-image: url();}
+#but {background-color: #330099; color: white;}
+#buto {background-color: #009966; color: white;}
+#b, #k {background-color: #7aa9d8; color: #27274d;}
+#c, #a {background-color: #d5b1f8; color: #250049;}
+#d, #f {background-color: #b0e2c9; color: #005028;}
+#g, #h {background-color: #fadea7; color: #744d00;}
+table, td, th {
+	border: 2px solid black;
+    text-align: left;
+    margin: 2px auto;}
+dt, p{
+    font-weight: 600;
+}
+th {
+    text-align: center;
+}
+table{
+    width: 100%;
+}
+h6 {text-align: right;}
