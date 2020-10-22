@@ -1,3 +1,4 @@
+body {background-color:#f7dfce ;}
 h1 {color:#33cc99; text-align: center; text-shadow: #006633 0 0 2px; font: 2em Arial, sans-serif;} 
 #bu {color:#ffcc33; background-color: #6633cc; border-image: url();}
 #but {background-color: #330099; color: white;}
@@ -9,7 +10,9 @@ h1 {color:#33cc99; text-align: center; text-shadow: #006633 0 0 2px; font: 2em A
 table, td, th {
 	border: 2px solid black;
     text-align: left;
-    margin: 2px auto;}
+    margin: 2px auto;
+    float: right;}
+
 dt, p{
     font-weight: 600;
 }
@@ -20,3 +23,30 @@ table{
     width: 100%;
 }
 h6 {text-align: right;}
+.wrap {
+border: 1px solid #d5b1f8;
+width: 80%;
+height: 700px;
+margin: auto;
+background-color:#d8eafc ;
+}
+.card {
+border: 2px solid #b0e2c9 ;
+width: 300px;
+height: 300px;
+float: left;
+margin: auto;
+border-radius: 20px;
+overflow: auto;
+padding: 10px;
+box-sizing: border-box;
+}
+img{
+width: 200px;
+margin: auto;
+display: block;
+}
+h5 {
+color: darkblue;
+
+}
