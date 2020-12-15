@@ -48,5 +48,36 @@ display: block;
 }
 h5 {
 color: darkblue;
-
+}
+.du
+{
+	list-style: none;
+	display: none;
+    float:top;
+}
+.su{
+	display: block;
+	text-decoration: none;
+	color: black;
+	background:lightgray;
+	font-family: 'Pacifico', cursive;
+	border: 1px solid yellow;
+    padding: 15px;
+}
+.su .du {
+    list-style: none;
+	width: 180px;
+	float: top;
+}
+.su .du {
+	display: none;
+}
+.su:hover .du{
+	display: block;
+    position: absolute;
+	margin-left: -40px; 
+}
+.ku:hover{
+	color: green;
+	background:lightblue;
 }
