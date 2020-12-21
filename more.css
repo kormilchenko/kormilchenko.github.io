@@ -1,0 +1,204 @@
+body{
+    background-color: burlywood;
+}
+.prog {
+    width: 100px;
+    height: 300px;
+    margin: auto;
+    padding: 5px;
+    border:2px solid black;
+    border-collapse: collapse;
+    border-radius: 10%;
+    text-align: center;
+}
+.more{
+    text-align: center;
+}
+.gol:nth-child(odd){
+    background-color: aquamarine;
+    color: bisque;
+}
+.gol:nth-child(even){
+    background-color:rgb(174, 255, 127) ;
+    color:  bisque;
+}
+ .gol, .hach, .zag, .hazv, .nom{
+    border: 1px solid black;
+} 
+.gol:nth-child(odd)>.zag:nth-child(odd){
+    background-color: rgb(174, 255, 127);
+    color: bisque;
+}
+.gol:nth-child(odd)>.hach:nth-child(1){
+    background-color: rgb(174, 255, 127);
+    color: bisque;
+    text-shadow: black 1px 1px 1px 1px;
+}
+.gol:nth-child(odd)>.nom:nth-child(odd){
+    background-color: rgb(174, 255, 127);
+    color: bisque;
+}
+.gol:nth-child(odd)>.hach:nth-child(3){
+    background-color: rgb(174, 255, 127);
+    color: bisque;
+}
+.gol:nth-child(even)>.zag:nth-child(odd){
+    background-color: rgb(127, 236, 255);
+    color: bisque;
+}
+.gol:nth-child(even)>.hazv:nth-child(odd){
+    background-color:rgb(127, 236, 255);
+    color: bisque;
+}
+.gol:nth-child(even)>.nom:nth-child(odd){
+    background-color:rgb(127, 236, 255);
+    color: bisque;
+}
+.gol:nth-child(even)>.hazv:nth-child(3){
+    background-color: rgb(127, 236, 255);
+    color: bisque;
+}
+.gol:nth-child(even)>.hazv:nth-child(odd){
+    background-color: rgb(127, 236, 255);
+    color: bisque;  
+}
+/*наукові відкриття*/
+.card {
+    border: 2px solid #b0e2c9 ;
+    width: 300px;
+    height: 300px;
+    float: left;
+    margin: 10px;
+    border-radius: 20px;
+    overflow: auto;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.wrap {
+    border: 1px solid #d5b1f8;
+    width: 80%;
+    height: 650px;
+    margin: auto;
+    background-color:#d8eafc ;
+}
+.mal{
+    width: 200px;
+    margin: auto;
+    display: block;
+}
+.text {
+    text-align: center;
+} 
+.glav{
+    color: darkblue;
+}
+.nazv {
+    text-align: center;
+}
+#top {
+    text-align: center;
+}
+/*Резюме*/
+.glav1{
+    font-weight: bold;
+    font-style: italic;
+    background-color: lightyellow;
+}
+.rez{
+    background-color: burlywood;
+    width: 700px;
+    margin: auto;
+    border: 6px solid rgb(94, 71, 42);
+}
+/*Мореплавці*/
+#b, #k {background-color: #7aa9d8; color: #27274d;}
+#c, #a {background-color: #d5b1f8; color: #250049;}
+#d, #f {background-color: #b0e2c9; color: #005028;}
+#g, #h {background-color: #fadea7; color: #744d00;}
+.tab, #b, #k, #c, #a, #d, #f, #g, #h, .a{
+	border: 2px solid black;
+    margin: 2px auto;
+}
+/*Меню*/
+#du
+{
+	list-style: none;
+	display: none;
+    float:top;
+}
+#su{
+	display: block;
+	text-decoration: none;
+	color: black;
+	background:lightgray;
+	font-family: 'Pacifico', cursive;
+	border: 1px solid yellow;
+    padding: 15px;
+}
+#su #du {
+    list-style: none;
+	width: 180px;
+	float: top;
+}
+#su #du {
+	display: none;
+}
+#su:hover #du{
+	display: block;
+    position: absolute;
+	margin-left: -40px; 
+}
+#ku:hover{
+	color: green;
+	background:lightblue;
+}
+/*Меню*/
+#menu {
+    position: static;
+}
+.mu{
+    text-align: center ;
+}
+.were{
+    float: right;
+    text-shadow: cornsilk 3px 3px 3px;
+}
+.koko{
+    text-align: center;
+    float: center;
+}
+ul:nth-child(2)
+		{
+			list-style: none;
+            display: none;
+		}
+.hi {
+			display: block;
+			text-decoration: none;
+			color: black;
+			background:rgb(216, 181, 135);
+			font-family: 'Pacifico', cursive;
+			border: 1px solid rgb(175, 221, 233);
+			padding: 15px;
+
+		}
+li {
+			list-style: none;
+			width: 200px;
+		}
+li ul {
+			display: none;
+
+		}
+li:hover ul{
+			display: block;
+			position: absolute;
+			margin-top: -54px;
+			margin-left: 160px; 
+			border: 1 solid yellow;
+
+		}
+.hi:hover{
+			color: green;
+			background:lightblue;
+		}
