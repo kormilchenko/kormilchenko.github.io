@@ -184,7 +184,7 @@ ul:nth-child(2)
 		}
 li {
 			list-style: none;
-			width: 200px;
+			width: 300px;
 		}
 li ul {
 			display: none;
@@ -193,9 +193,8 @@ li ul {
 li:hover ul{
 			display: block;
 			position: absolute;
-			margin-top: -54px;
-			margin-left: 160px; 
-			border: 1 solid yellow;
+			margin-top: -55px;
+			margin-left: 260px; 
 
 		}
 .hi:hover{
@@ -204,12 +203,18 @@ li:hover ul{
         }
 .hgf {
     display: block;
-    border: 5px solid srgb(70, 102, 77);
-    height: 50px;
-    width: 50px;
+    border: 2px solid rgb(255, 127, 144);
+    height: 30px;
+    width: 30px;
     background: transparent;
     position: sticky;
     top: 700px;
     left: 1700px;
     border-radius: 50%;
+    text-align: center;
+    box-shadow: rgb(84, 170, 141) 3px 2px 1px;
+    text-decoration: none;
+}
+.hgd {
+    text-decoration: none;
 }
