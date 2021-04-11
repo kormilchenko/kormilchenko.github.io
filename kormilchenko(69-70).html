@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kormilchenko</title>
+    <style>
+        .nm{
+            width: 330px;
+            text-align: center;
+        }
+        .hr{
+            margin-left: 0;
+            width: 350px;
+            color: blue;
+        }
+        .obchi{
+            border: black solid 2px;
+            height: 650px;
+            width: 350px;
+            padding: 20px;
+            border-radius: 20px;
+            margin-left: 720px;
+        }
+        .treyg{
+            width: 0px;
+            margin-left: -10px;
+            position: sticky;
+        }
+        .perv{
+            width: 50px;
+            transform: rotate(-35deg);
+            text-align: center;
+        }
+        .btor{
+            width: 50px;
+            transform: rotate(60deg);
+            text-align: center;
+        }
+        .tret{
+            width: 50px;
+            text-align: center;
+        }
+        .cym{
+            color: white;
+            margin-left: 180px;
+            margin-top: -90px;
+            text-align: center;
+            width: 100px;
+        }
+        #fourpriam{
+            width: 0px;
+        }
+        #kbadrat{
+            width: 0px;
+            position: fixed;
+        }
+        #priam, #mnogokyt, #ravnmnogoyg, #plkvadrat, #paralelogram, #treygbusota, #treygvpkryg, #treygopiskryg{
+            width: 0px;
+        }
+        .zag{
+            font-size: 20px;
+            font-weight: bold;
+            margin-left: 860px;
+        }
+        body{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        #bykva{
+            width: 30px;
+            height: 210px;
+            border: 1px solid black;
+            margin-top: 180px;
+            margin-left: -50px;
+            padding: 5px;
+        }
+        #fa{
+            margin-top: 2px;
+        }
+        #fo{
+            margin-top: 13px;
+        }
+        #fi{
+            margin-top: 20px;
+        }
+        #fe{
+            margin-top: 3px;
+        }
+        #fu{
+            margin-top: 20px;
+        }
+        #fy{
+            margin-top: 17px;
+        }
+        #one{
+            margin-left: -15px;
+        }
+    </style>
+</head>
+<body>
+        <div class="perim">
+            <p class="zag">Калькулятор</p>
+            <div class="obchi">
+                <form name="frm">
+                    <select name="formul" id="one">
+                        <option id="bisque" value="zero" >За умовчанням</option>
+                        <optgroup label="Периметр">
+                            <option id="white" value="one"> Периметр трикутника</option>
+                            <option id="red" value="two">Периметр довільного чотирикутника</option>
+                            <option id="green" value="three">Периметр квадрата</option>
+                            <option id="blue" value="four">Периметр прямокутика</option>
+                            <option id="grey" value="five" >Периметр багатокутника</option>
+                            <option id="grey" value="six" >Периметр рівностороннього багатокутника</option>
+                            <option disabled></option>
+                        </optgroup>
+                        <optgroup label="Площа:">
+                            <option disabled></option>
+                            <optgroup label="Площа трикутника" class="pltreyg">
+                                <option id="white" value="seven">За формулою Герона</option>
+                                <option id="red" value="twenty">Площа трикутника за стороною та висотою</option>
+                                <option id="green" value="nine">Площа за півпериметром і радіусом вписаного кола</option>
+                                <option id="red" value="ten">Площа за трьома сторонами і радіусом описаного кола</option>
+                            </optgroup>
+                            <optgroup label="Площа квадрата" class="pltreyg">
+                                <option id="white" value="thirteen">Площа квадрата за довжиною сторони</option>
+                                <option id="red" value="fourteen">Площа квадрата за довжиною діагоналі</option>
+                            </optgroup>
+                            <optgroup label="Площа прямокутника">
+                                <option id="red" value="fiveteen">Площа прямокутника</option>
+                            </optgroup>
+                            <optgroup label="Площа паралелограма">
+                                <option id="red" value="sixteen">Площа паралелограма</option>
+                            </optgroup>
+                        </optgroup>
+                    </select>
+                    <p class="nm" id="nm"> </p>
+                    <br><input type="button" id="obrat" value="Вибрати формулу" onclick="textPerim()">
+                    <hr class="hr">
+                    <p class="onectr"> Перша сторона 
+                        <input type="text" name="ab" id="ab" placeholder="Введіть розмір сторони." style="margin-left: 15px;">
+                    </p>
+                    <p class="twoctr"> Друга сторона 
+                        <input type="text" name="bc" id="bc" placeholder="Введіть розмір сторони." style="margin-left: 20px; "> 
+                    </p>
+                    <p class="threectr"> Третя сторона 
+                        <input type="text" name="ac" id="ac" placeholder="Введіть розмір сторони." style="margin-left: 23px;"> 
+                    </p>
+                    <p class="fourctr"> Четверта сторона 
+                        <input type="text" name="bf" id="bf" placeholder="Введіть розмір сторони." > 
+                    </p>
+                    <p class="fivectr"> П'ята сторона 
+                        <input type="text" name="kp" id="kp" placeholder="Введіть розмір сторони." style="margin-left: 24px;">
+                    </p>
+                    <p class="sixctr"> Шоста сторона  
+                        <input type="text" name="bff" id="iu" placeholder="Введіть розмір сторони." style="margin-left: 15px;">
+                    </p>
+                    <input type="button" name="" id="" value="Вивести результат" onclick="obchisPerim()">
+                    <input type="button" id="but" value="Очистити">
+                    <p id="rezul" class="rezul"></p>
+                    <img src="треугольник.jpg" id="imtreyg" alt="" class="treyg">
+                    <p class="perv" id="perv"></p>
+                    <p class="btor" id="btor"></p>
+                    <p class="tret" id="tret"></p>
+                    <p id="chet"></p>
+                    <p class="cym" id="cym"></p>
+                    </form> 
+            </div>
+        </div> 
+        <div id="bykva">
+            <p id="fa"></p>
+            <p id="fo"></p>
+            <p id="fi"></p>
+            <p id="fe"></p>
+            <p id="fu"></p>
+            <p id="fy"></p>
+        </div>
+        <div style="margin-bottom: 200px;">
+            <img src="довчотирикутник.jpg" alt="" id="fourpriam">  
+        </div>
+            <div> <img src="квадрат.jpg" alt="" id="kbadrat"> </div>
+            <div><img src="прямоугольник.jpg" alt="" id="priam"></div>
+            <div><img src="многоугольник.jpg" alt="" id="mnogokyt"></div>
+            <div><img src="равнмногоугольник.jpg" alt="" id="ravnmnogoyg"></div>
+            <div> <img src="площадьквадрата.jpg" alt="" id="plkvadrat"> </div>
+            <div> <img src="паралелограм.jpg" alt="" id="paralelogram"> </div>
+            <div> <img src="треугольник+высота.jpg" alt="" id="treygbusota"> </div>
+            <div> <img src="треугольник+впкруг.jpg" alt="" id="treygvpkryg"> </div>
+            <div> <img src="треугольник+опкруг.jpg" alt="" id="treygopiskryg"> </div>
+            <div> <img src="" alt="" id=""> </div>
+            <div> <img src="" alt="" id=""> </div>
+            <div> <img src="" alt="" id=""> </div>
+            <div> <img src="" alt="" id=""> </div>
+            <div> <img src="" alt="" id=""> </div>
+            <div> <img src="" alt="" id=""> </div>
+            <div> <img src="" alt="" id=""> </div>
+            <div> <img src="" alt="" id=""> </div>
+        <div>
+            <p class="perv1" id="perv1"></p>
+            <p class="btor1" id="btor1"></p>
+            <p class="tret1" id="tret1"></p>
+            <p class="chet1" id="chet1"></p>
+            <p id="piat1"></p>
+            <p id="chect1"></p>
+        </div>
+    <script>
+        function textPerim() {
+            var valu = frm.formul.value;
+            if(valu == "one"){
+                nm.innerHTML = "P = AB + BC + AC";
+                document.getElementById("treygopiskryg").style.width = '0px';
+                document.getElementById("fe").style.fontSize = '15px';
+                document.getElementById("nm").style.fontSize = '20px';
+                document.getElementById("ab").style.border = 'black solid 1px';
+                document.getElementById("bc").style.border = 'black solid 1px';
+                document.getElementById("ac").style.border = 'black solid 1px';
+                document.getElementById("bf").style.backgroundColor = 'black';
+                document.getElementById("bf").style.color = 'red';
+                document.getElementById("kp").style.backgroundColor = 'black';
+                document.getElementById("kp").style.color = 'red';
+                document.getElementById("iu").style.backgroundColor = 'black';
+                document.getElementById("iu").style.color = 'red';
+                document.getElementById("bc").style.backgroundColor = 'white';
+                document.getElementById("bc").style.color = 'black';
+                document.getElementById("ac").style.backgroundColor = 'white';
+                document.getElementById("ac").style.color = 'black';
+                fa.innerText = "AB";
+                fo.innerText = "BC";
+                fi.innerText = "AC";
+                document.getElementById("bc").style.marginTop = '0';
+                document.getElementById("ac").style.marginTop = '0';
+                document.getElementById("bf").style.marginTop = '0';
+                rezul.innerText = "asadd";
+                document.getElementById("rezul").style.color = 'white';
+                document.getElementById("imtreyg").style.width = '300px';
+                document.getElementById("imtreyg").style.marginLeft = '20px';
+                document.getElementById("fourpriam").style.width = '0px';
+                document.getElementById("kbadrat").style.width = '0px';
+                document.getElementById("priam").style.width = '0px';
+                document.getElementById("mnogokyt").style.width = '0px';
+                document.getElementById("ravnmnogoyg").style.width = '0px';
+                document.getElementById("plkvadrat").style.width = '0px';
+                document.getElementById("paralelogram").style.width = '0px';
+                document.getElementById("treygbusota").style.width = '0px';
+                document.getElementById("treygvpkryg").style.width = '0px';
+                document.getElementById("bykva").style.marginTop = '226px';
+                fe.innerText = " ";
+                fu.innerText = " ";
+                fy.innerText = " ";
+                perv1.innerText = " ";
+                chet1.innerText = " ";
+                tret1.innerText = " ";
+                btor1.innerText = " ";
+                piat1.innerText = " ";
+                chect1.innerText = " ";
+                perv.innerText = " ";
+                btor.innerText = " ";
+                tret.innerText = " ";
+                chet.innerText = " ";
+            } 
+            else if(valu == "two"){
+                chect1.innerText = " ";
+                piat1.innerText = " ";
+                document.getElementById("treygopiskryg").style.width = '0px';
+                document.getElementById("nm").style.fontSize = '20px';
+                document.getElementById("fe").style.fontSize = '15px';
+                nm.innerHTML = "P = AB + BC + DC + AD";
+                document.getElementById("bf").style.backgroundColor = 'white';
+                document.getElementById("bf").style.color = 'black';
+                document.getElementById("bf").style.border = 'black solid 1px';
+                document.getElementById("kp").style.backgroundColor = 'black';
+                document.getElementById("kp").style.color = 'red';
+                document.getElementById("iu").style.backgroundColor = 'black';
+                document.getElementById("iu").style.color = 'red';
+                document.getElementById("bc").style.backgroundColor = 'white';
+                document.getElementById("bc").style.color = 'black';
+                document.getElementById("ac").style.backgroundColor = 'white';
+                document.getElementById("ac").style.color = 'black';
+                document.getElementById("bykva").style.marginTop = '226px';
+                document.getElementById("imtreyg").style.width = '0px';
+                document.getElementById("kbadrat").style.width = '0px';
+                document.getElementById("priam").style.width = '0px';
+                document.getElementById("mnogokyt").style.width = '0px';
+                document.getElementById("ravnmnogoyg").style.width = '0px';
+                document.getElementById("plkvadrat").style.width = '0px';
+                document.getElementById("paralelogram").style.width = '0px';
+                document.getElementById("treygbusota").style.width = '0px';
+                document.getElementById("treygvpkryg").style.width = '0px';
+                document.getElementById("bc").style.marginTop = '0';
+                document.getElementById("ac").style.marginTop = '0';
+                document.getElementById("bf").style.marginTop = '0';
+                fa.innerText = "AB";
+                fo.innerText = "BC";
+                fi.innerText = "CD";
+                fe.innerText = "AD";
+                fu.innerText = " ";
+                fy.innerText = " ";
+                document.getElementById("fourpriam").style.width = '250px';
+                document.getElementById("fourpriam").style.marginLeft = '-300px'
+                document.getElementById("fourpriam").style.marginBottom = '-700px'
+                cym.innerText = ' ';
+                perv.innerText = " ";
+                btor.innerText = " ";
+                tret.innerText = " ";
+                perv1.innerText = " ";
+                btor1.innerText = " ";
+                tret1.innerText = " ";
+                chet1.innerText = " ";
+                piat1.innerText = " ";
+                chect1.innerText = " ";
+                rezul.innerText = " ";
+            } 
+            else if (valu == "three"){
+                chect1.innerText = " ";
+                piat1.innerText = " ";
+                document.getElementById("fe").style.fontSize = '15px';
+                document.getElementById("treygopiskryg").style.width = '0px';
+                document.getElementById("nm").style.fontSize = '20px';
+                nm.innerHTML = "P = AB * 4";
+                document.getElementById("kp").style.backgroundColor = 'black';
+                document.getElementById("kp").style.color = 'red';
+                document.getElementById("iu").style.backgroundColor = 'black';
+                document.getElementById("iu").style.color = 'red';
+                document.getElementById("bc").style.backgroundColor = 'black';
+                document.getElementById("bc").style.color = 'red';
+                document.getElementById("ac").style.backgroundColor = 'black';
+                document.getElementById("ac").style.color = 'red';
+                document.getElementById("bf").style.backgroundColor = 'black';
+                document.getElementById("bf").style.color = 'red';
+                document.getElementById("bykva").style.marginTop = '226px';
+                document.getElementById("imtreyg").style.width = '0px';
+                document.getElementById("fourpriam").style.width = '0px';
+                document.getElementById("kbadrat").style.width = '200px';
+                document.getElementById("kbadrat").style.marginTop = '520px';
+                document.getElementById("kbadrat").style.marginLeft = '-280px';
+                document.getElementById("mnogokyt").style.width = '0px';
+                document.getElementById("ravnmnogoyg").style.width = '0px';
+                document.getElementById("plkvadrat").style.width = '0px';
+                document.getElementById("paralelogram").style.width = '0px';
+                document.getElementById("treygbusota").style.width = '0px';
+                document.getElementById("treygvpkryg").style.width = '0px';
+                fa.innerText = "AB";
+                fo.innerText = " ";
+                fi.innerText = " ";
+                fe.innerText = " ";
+                fu.innerText = " ";
+                fy.innerText = " ";
+                cym.innerText = ' ';
+                perv.innerText = " ";
+                btor.innerText = " ";
+                tret.innerText = " ";
+                perv1.innerText = " ";
+                btor1.innerText = " ";
+                tret1.innerText = " ";
+                chet1.innerText = " ";
+                piat1.innerText = " ";
+                chect1.innerText = " ";
+                rezul.innerText = " ";
+                document.getElementById("priam").style.width = '0px';
+
+            } 
+            else if (valu == "four"){
+                cym.innerText = ' ';
+                perv.innerText = " ";
+                btor.innerText = " ";
+                tret.innerText = " ";
+                perv1.innerText = " ";
+                btor1.innerText = " ";
+                tret1.innerText = " ";
+                chet1.innerText = " ";
+                piat1.innerText = " ";
+                chect1.innerText = " ";
+                rezul.innerText = " ";
+                chect1.innerText = " ";
+                piat1.innerText = " ";
+                document.getElementById("treygopiskryg").style.width = '0px';
+                document.getElementById("fe").style.fontSize = '15px';
+                nm.innerText = "P = (AB + BC) * 2";
+                document.getElementById("nm").style.fontSize = '20px';
+                document.getElementById("kp").style.backgroundColor = 'black';
+                document.getElementById("kp").style.color = 'red';
+                document.getElementById("iu").style.backgroundColor = 'black';
+                document.getElementById("iu").style.color = 'red';
+                document.getElementById("ac").style.backgroundColor = 'black';
+                document.getElementById("ac").style.color = 'red';
+                document.getElementById("bf").style.backgroundColor = 'black';
+                document.getElementById("bf").style.color = 'red'
+                document.getElementById("bc").style.backgroundColor = 'white';
+                document.getElementById("bc").style.color = 'black';
+                document.getElementById("bykva").style.marginTop = '226px';
+                document.getElementById("imtreyg").style.width = '0px';
+                document.getElementById("fourpriam").style.width = '0px';
+                document.getElementById("kbadrat").style.width = '0px';
+                document.getElementById("priam").style.width = '250px';
+                document.getElementById("priam").style.marginTop = '520px';
+                document.getElementById("priam").style.marginLeft = '-300px';
+                document.getElementById("mnogokyt").style.width = '0px';
+                document.getElementById("ravnmnogoyg").style.width = '0px';
+                document.getElementById("plkvadrat").style.width = '0px';
+                document.getElementById("paralelogram").style.width = '0px';
+                document.getElementById("treygbusota").style.width = '0px';
+                document.getElementById("treygvpkryg").style.width = '0px';
+                fa.innerText = "AB";
+                fo.innerText = "BC";
+                fu.innerText = " ";
+                fy.innerText = " ";
+                fe.innerText = " ";
+                fi.innerText = " ";
+            }
+            else if (valu == "five"){
+                nm.innerText = "P = AB + BC + CD + DK + KP + AP";
+                document.getElementById("nm").style.fontSize = '20px';
+                document.getElementById("treygopiskryg").style.width = '0px';
+                document.getElementById("fe").style.fontSize = '15px';
+                document.getElementById("ab").style.backgroundColor = 'white';
+                document.getElementById("ab").style.color = 'black';
+                document.getElementById("bc").style.backgroundColor = 'white';
+                document.getElementById("bc").style.color = 'black';
+                document.getElementById("ac").style.backgroundColor = 'white';
+                document.getElementById("ac").style.color = 'black';
+                document.getElementById("bf").style.backgroundColor = 'white';
+                document.getElementById("bf").style.color = 'black';
+                document.getElementById("bf").style.border = 'black solid 1px';
+                document.getElementById("kp").style.backgroundColor = 'white';
+                document.getElementById("kp").style.color = 'black';
+                document.getElementById("kp").style.border = 'black solid 1px';
+                document.getElementById("iu").style.backgroundColor = 'white';
+                document.getElementById("iu").style.color = 'black';
+                document.getElementById("iu").style.border = 'black solid 1px';
+                document.getElementById("bykva").style.marginTop = '226px';
+                document.getElementById("imtreyg").style.width = '0px';
+                document.getElementById("fourpriam").style.width = '0px';
+                document.getElementById("kbadrat").style.width = '0px';
+                document.getElementById("priam").style.width = '0px';
+                document.getElementById("mnogokyt").style.width = '250px';
+                document.getElementById("mnogokyt").style.marginLeft = '-300px';
+                document.getElementById("mnogokyt").style.marginTop = '525px';
+                document.getElementById("paralelogram").style.width = '0px';
+                document.getElementById("plkvadrat").style.width = '0px';
+                document.getElementById("ravnmnogoyg").style.width = '0px';
+                document.getElementById("treygbusota").style.width = '0px';
+                document.getElementById("treygvpkryg").style.width = '0px';
+                fa.innerText = "AB";
+                fo.innerText = "BC";
+                fi.innerText = "CD";
+                fe.innerText = "DK";
+                fu.innerText = "KP";
+                fy.innerText = "AP";
+                cym.innerText = ' ';
+                perv.innerText = " ";
+                btor.innerText = " ";
+                tret.innerText = " ";
+                perv1.innerText = " ";
+                btor1.innerText = " ";
+                tret1.innerText = " ";
+                chet1.innerText = " ";
+                piat1.innerText = " ";
+                chect1.innerText = " ";
+                rezul.innerText = " ";
+                chect1.innerText = " ";
+                piat1.innerText = " ";
+            } 
+            else if(valu == "six"){
+                nm.innerText = "P = AB * 6";
+                document.getElementById("nm").style.fontSize = '20px';
+                document.getElementById("treygopiskryg").style.width = '0px';
+                document.getElementById("fe").style.fontSize = '15px';
+                document.getElementById("ab").style.backgroundColor = 'white';
+                document.getElementById("ab").style.color = 'black';
+                document.getElementById("bc").style.backgroundColor = 'black';
+                document.getElementById("bc").style.color = 'red';
+                document.getElementById("ac").style.backgroundColor = 'black';
+                document.getElementById("ac").style.color = 'red';
+                document.getElementById("bf").style.backgroundColor = 'black';
+                document.getElementById("bf").style.color = 'red';
+                document.getElementById("bf").style.border = 'black solid 1px';
+                document.getElementById("kp").style.backgroundColor = 'black';
+                document.getElementById("kp").style.color = 'red';
+                document.getElementById("iu").style.backgroundColor = 'black';
+                document.getElementById("iu").style.color = 'red';
+                document.getElementById("imtreyg").style.width = '0px';
+                document.getElementById("fourpriam").style.width = '0px';
+                document.getElementById("kbadrat").style.width = '0px';
+                document.getElementById("priam").style.width = '0px';
+                document.getElementById("mnogokyt").style.width = '0px';
+                document.getElementById("ravnmnogoyg").style.width = '170px';
+                document.getElementById("ravnmnogoyg").style.marginLeft = '-270px';
+                document.getElementById("ravnmnogoyg").style.marginTop = '555px';
+                document.getElementById("plkvadrat").style.width = '0px';
+                document.getElementById("paralelogram").style.width = '0px';
+                document.getElementById("treygbusota").style.width = '0px';
+                document.getElementById("treygvpkryg").style.width = '0px';
+                document.getElementById("bykva").style.marginTop = '226px';
+                fa.innerText = "AB";
+                fo.innerText = " ";
+                fi.innerText = " ";
+                fe.innerText = " ";
+                fu.innerText = " ";
+                fy.innerText = " ";
+                cym.innerText = ' ';
+                perv.innerText = " ";
+                btor.innerText = " ";
+                tret.innerText = " ";
+                perv1.innerText = " ";
+                btor1.innerText = " ";
+                tret1.innerText = " ";
+                chet1.innerText = " ";
+                piat1.innerText = " ";
+                chect1.innerText = " ";
+                rezul.innerText = " ";
+                chect1.innerText = " ";
+            }
+            else if(valu == "seven"){
+                nm.innerHTML = "S= √p(p-AB)(p-BC)(p-AC)";
+                document.getElementById("nm").style.fontSize = '20px';
+                document.getElementById("treygopiskryg").style.width = '0px';
+                document.getElementById("fe").style.fontSize = '15px';
+                document.getElementById("ab").style.border = 'black solid 1px';
+                document.getElementById("bc").style.border = 'black solid 1px';
+                document.getElementById("ac").style.border = 'black solid 1px';
+                document.getElementById("bf").style.backgroundColor = 'black';
+                document.getElementById("bf").style.color = 'red';
+                document.getElementById("kp").style.backgroundColor = 'black';
+                document.getElementById("kp").style.color = 'red';
+                document.getElementById("iu").style.backgroundColor = 'black';
+                document.getElementById("iu").style.color = 'red';
+                document.getElementById("bc").style.backgroundColor = 'white';
+                document.getElementById("bc").style.color = 'black';
+                document.getElementById("ac").style.backgroundColor = 'white';
+                document.getElementById("ac").style.color = 'black';
+                fa.innerText = "AB";
+                fo.innerText = "BC";
+                fi.innerText = "AC";
+                document.getElementById("imtreyg").style.width = '300px';
+                document.getElementById("imtreyg").style.marginLeft = '20px';
+                document.getElementById("fourpriam").style.width = '0px';
+                document.getElementById("kbadrat").style.width = '0px';
+                document.getElementById("priam").style.width = '0px';
+                document.getElementById("mnogokyt").style.width = '0px';
+                document.getElementById("ravnmnogoyg").style.width = '0px';
+                document.getElementById("plkvadrat").style.width = '0px';
+                document.getElementById("paralelogram").style.width = '0px';
+                document.getElementById("treygbusota").style.width = '0px';
+                document.getElementById("treygvpkryg").style.width = '0px';
+                document.getElementById("bykva").style.marginTop = '226px';
+                document.getElementById("bc").style.marginTop = '0';
+                document.getElementById("ac").style.marginTop = '0';
+                document.getElementById("bf").style.marginTop = '0';
+                rezul.innerText = "asadd";
+                document.getElementById("rezul").style.color = 'white';
+                fe.innerText = " ";
+                fu.innerText = " ";
+                fy.innerText = " ";
+                perv1.innerText = " ";
+                chet1.innerText = " ";
+                tret1.innerText = " ";
+                btor1.innerText = " ";
+                piat1.innerText = " ";
+                chect1.innerText = " ";
+                perv.innerText = " ";
+                btor.innerText = " ";
+                tret.innerText = " ";
+                chet.innerText = " ";
+            }
+            else if(valu == "twenty"){
+                nm.innerHTML = "S = AC * BK";
+                document.getElementById("nm").style.fontSize = '20px';
+                document.getElementById("treygopiskryg").style.width = '0px';
+                document.getElementById("fe").style.fontSize = '15px';
+                document.getElementById("ab").style.border = 'black solid 1px';
+                document.getElementById("bc").style.border = 'black solid 1px';
+                document.getElementById("ac").style.border = 'black solid 1px';
+                document.getElementById("bf").style.backgroundColor = 'black';
+                document.getElementById("bf").style.color = 'red';
+                document.getElementById("kp").style.backgroundColor = 'black';
+                document.getElementById("kp").style.color = 'red';
+                document.getElementById("iu").style.backgroundColor = 'black';
+                document.getElementById("iu").style.color = 'red';
+                document.getElementById("bc").style.backgroundColor = 'white';
+                document.getElementById("bc").style.color = 'black';
+                document.getElementById("ac").style.backgroundColor = 'black';
+                document.getElementById("ac").style.color = 'red';
+                fa.innerText = "AC";
+                fo.innerText = "BK";
+                fi.innerText = " ";
+                rezul.innerText = "asadd";
+                document.getElementById("bc").style.marginTop = '0';
+                document.getElementById("ac").style.marginTop = '0';
+                document.getElementById("bf").style.marginTop = '0';
+                document.getElementById("rezul").style.color = 'white';
+                document.getElementById("imtreyg").style.width = '0px';
+                document.getElementById("fourpriam").style.width = '0px';
+                document.getElementById("kbadrat").style.width = '0px';
+                document.getElementById("priam").style.width = '0px';
+                document.getElementById("mnogokyt").style.width = '0px';
+                document.getElementById("ravnmnogoyg").style.width = '0px';
+                document.getElementById("plkvadrat").style.width = '0px';
+                document.getElementById("paralelogram").style.width = '0px';
+                document.getElementById("bykva").style.marginTop = '226px';
+                document.getElementById("treygbusota").style.width = '200px';
+                document.getElementById("treygbusota").style.marginTop = '550px';
+                document.getElementById("treygbusota").style.marginLeft = '-280px';
+                document.getElementById("treygvpkryg").style.width = '0px';
+                fe.innerText = " ";
+                fu.innerText = " ";
+                fy.innerText = " ";
+                perv1.innerText = " ";
+                chet1.innerText = " ";
+                tret1.innerText = " ";
+                btor1.innerText = " ";
+                piat1.innerText = " ";
+                chect1.innerText = " ";
+                perv.innerText = " ";
+                btor.innerText = " ";
+                tret.innerText = " ";
+                chet.innerText = " ";
+            }
+            else if(valu == "nine"){
+                nm.innerHTML = "S = p * r";
+                document.getElementById("nm").style.fontSize = '20px';
+                document.getElementById("treygopiskryg").style.width = '0px';
+                document.getElementById("ab").style.border = 'black solid 1px';
+                document.getElementById("bc").style.border = 'black solid 1px';
+                document.getElementById("ac").style.border = 'black solid 1px';
+                document.getElementById("bf").style.backgroundColor = 'white';
+                document.getElementById("bf").style.color = 'black';
+                document.getElementById("kp").style.backgroundColor = 'black';
+                document.getElementById("kp").style.color = 'red';
+                document.getElementById("iu").style.backgroundColor = 'black';
+                document.getElementById("iu").style.color = 'red';
+                document.getElementById("bc").style.backgroundColor = 'white';
+                document.getElementById("bc").style.color = 'black';
+                document.getElementById("ac").style.backgroundColor = 'white';
+                document.getElementById("ac").style.color = 'black';
+                fa.innerText = "AB";
+                fo.innerText = "BC";
+                fi.innerText = "AC";
+                rezul.innerText = "asadd";
+                document.getElementById("bc").style.marginTop = '0';
+                document.getElementById("ac").style.marginTop = '0';
+                document.getElementById("bf").style.marginTop = '0';
+                document.getElementById("rezul").style.color = 'white';
+                document.getElementById("imtreyg").style.width = '0px';
+                document.getElementById("fourpriam").style.width = '0px';
+                document.getElementById("kbadrat").style.width = '0px';
+                document.getElementById("priam").style.width = '0px';
+                document.getElementById("mnogokyt").style.width = '0px';
+                document.getElementById("ravnmnogoyg").style.width = '0px';
+                document.getElementById("plkvadrat").style.width = '0px';
+                document.getElementById("paralelogram").style.width = '0px';
+                document.getElementById("bykva").style.marginTop = '226px';
+                document.getElementById("treygbusota").style.width = '0px';
+                document.getElementById("treygvpkryg").style.width = '250px';
+                document.getElementById("treygvpkryg").style.marginLeft = '-310px';
+                document.getElementById("treygvpkryg").style.marginTop = '540px';
+                document.getElementById("fe").style.fontSize = '20px';
+                fe.innerText = "r";
+                fu.innerText = " ";
+                fy.innerText = " ";
+                perv1.innerText = " ";
+                chet1.innerText = " ";
+                tret1.innerText = " ";
+                btor1.innerText = " ";
+                piat1.innerText = " ";
+                chect1.innerText = " ";
+                perv.innerText = " ";
+                btor.innerText = " ";
+                tret.innerText = " ";
+                chet.innerText = " ";
+            }
+            else if(valu == "ten"){
+                nm.innerHTML = "S = (AB * BC * AC) / 4R";
+                document.getElementById("nm").style.fontSize = '20px';
+                document.getElementById("ab").style.border = 'black solid 1px';
+                document.getElementById("bc").style.border = 'black solid 1px';
+                document.getElementById("ac").style.border = 'black solid 1px';
+                document.getElementById("bf").style.backgroundColor = 'white';
+                document.getElementById("bf").style.color = 'black';
+                document.getElementById("kp").style.backgroundColor = 'black';
+                document.getElementById("kp").style.color = 'red';
+                document.getElementById("iu").style.backgroundColor = 'black';
+                document.getElementById("iu").style.color = 'red';
+                document.getElementById("bc").style.backgroundColor = 'white';
+                document.getElementById("bc").style.color = 'black';
+                document.getElementById("ac").style.backgroundColor = 'white';
+                document.getElementById("ac").style.color = 'black';
+                fa.innerText = "AB";
+                fo.innerText = "BC";
+                fi.innerText = "AC";
+                rezul.innerText = "asadd";
+                document.getElementById("bc").style.marginTop = '0';
+                document.getElementById("ac").style.marginTop = '0';
+                document.getElementById("bf").style.marginTop = '0';
+                document.getElementById("rezul").style.color = 'white';
+                document.getElementById("imtreyg").style.width = '0px';
+                document.getElementById("fourpriam").style.width = '0px';
+                document.getElementById("kbadrat").style.width = '0px';
+                document.getElementById("priam").style.width = '0px';
+                document.getElementById("mnogokyt").style.width = '0px';
+                document.getElementById("ravnmnogoyg").style.width = '0px';
+                document.getElementById("plkvadrat").style.width = '0px';
+                document.getElementById("paralelogram").style.width = '0px';
+                document.getElementById("bykva").style.marginTop = '226px';
+                document.getElementById("treygbusota").style.width = '0px';
+                document.getElementById("treygvpkryg").style.width = '0px';
+                document.getElementById("treygopiskryg").style.width = '200px';
+                document.getElementById("treygopiskryg").style.marginLeft = '-300px';
+                document.getElementById("treygopiskryg").style.marginTop = '540px';
+                document.getElementById("fe").style.fontSize = '16px';
+                fe.innerText = "R";
+                fu.innerText = " ";
+                fy.innerText = " ";
+                perv1.innerText = " ";
+                chet1.innerText = " ";
+                tret1.innerText = " ";
+                btor1.innerText = " ";
+                piat1.innerText = " ";
+                chect1.innerText = " ";
+                perv.innerText = " ";
+                btor.innerText = " ";
+                tret.innerText = " ";
+                chet.innerText = " ";
+            }
+            else if(valu == "thirteen"){
+                chect1.innerText = " ";
+                piat1.innerText = " ";
+                nm.innerHTML = "S = AB²";
+                document.getElementById("treygopiskryg").style.width = '0px';
+                document.getElementById("nm").style.fontSize = '20px';
+                document.getElementById("fe").style.fontSize = '15px';
+                document.getElementById("kp").style.backgroundColor = 'black';
+                document.getElementById("kp").style.color = 'red';
+                document.getElementById("iu").style.backgroundColor = 'black';
+                document.getElementById("iu").style.color = 'red';
+                document.getElementById("bc").style.backgroundColor = 'black';
+                document.getElementById("bc").style.color = 'red';
+                document.getElementById("ac").style.backgroundColor = 'black';
+                document.getElementById("ac").style.color = 'red';
+                document.getElementById("bf").style.backgroundColor = 'black';
+                document.getElementById("bf").style.color = 'red';
+                document.getElementById("bykva").style.marginTop = '226px';
+                document.getElementById("imtreyg").style.width = '0px';
+                document.getElementById("fourpriam").style.width = '0px';
+                document.getElementById("kbadrat").style.width = '200px';
+                document.getElementById("kbadrat").style.marginTop = '520px';
+                document.getElementById("kbadrat").style.marginLeft = '-280px'
+                document.getElementById("priam").style.width = '0px';
+                document.getElementById("mnogokyt").style.width = '0px';
+                document.getElementById("ravnmnogoyg").style.width = '0px';
+                document.getElementById("plkvadrat").style.width = '0px';
+                document.getElementById("paralelogram").style.width = '0px';
+                document.getElementById("treygbusota").style.width = '0px';
+                document.getElementById("treygvpkryg").style.width = '0px';
+                fa.innerText = "AB";
+                fo.innerText = " ";
+                fi.innerText = " ";
+                fe.innerText = " ";
+                fu.innerText = " ";
+                fy.innerText = " ";
+                cym.innerText = ' ';
+                perv.innerText = " ";
+                btor.innerText = " ";
+                tret.innerText = " ";
+                perv1.innerText = " ";
+                btor1.innerText = " ";
+                tret1.innerText = " ";
+                chet1.innerText = " ";
+                piat1.innerText = " ";
+                chect1.innerText = " ";
+                rezul.innerText = " ";;
+            }
+            else if(valu == "fourteen"){
+                document.getElementById("nm").style.fontSize = '20px';
+                document.getElementById("treygopiskryg").style.width = '0px';
+                document.getElementById("fe").style.fontSize = '15px';
+                nm.innerHTML = "S = 1/2 AC²";
+                document.getElementById("kp").style.backgroundColor = 'black';
+                document.getElementById("kp").style.color = 'red';
+                document.getElementById("iu").style.backgroundColor = 'black';
+                document.getElementById("iu").style.color = 'red';
+                document.getElementById("bc").style.backgroundColor = 'black';
+                document.getElementById("bc").style.color = 'red';
+                document.getElementById("ac").style.backgroundColor = 'black';
+                document.getElementById("ac").style.color = 'red';
+                document.getElementById("bf").style.backgroundColor = 'black';
+                document.getElementById("bf").style.color = 'red';
+                document.getElementById("bykva").style.marginTop = '226px';
+                document.getElementById("imtreyg").style.width = '0px';
+                document.getElementById("fourpriam").style.width = '0px';
+                document.getElementById("kbadrat").style.width = '0px';
+                document.getElementById("priam").style.width = '0px';
+                document.getElementById("mnogokyt").style.width = '0px';
+                document.getElementById("ravnmnogoyg").style.width = '0px';
+                document.getElementById("plkvadrat").style.width = '150px';
+                document.getElementById("plkvadrat").style.marginTop = '540px';
+                document.getElementById("plkvadrat").style.marginLeft = '-250px';
+                document.getElementById("paralelogram").style.width = '0px';
+                document.getElementById("treygbusota").style.width = '0px';
+                document.getElementById("treygvpkryg").style.width = '0px';
+                fa.innerText = "AC";
+                fo.innerText = " ";
+                fi.innerText = " ";
+                fe.innerText = " ";
+                fu.innerText = " ";
+                fy.innerText = " ";
+                cym.innerText = ' ';
+                perv.innerText = " ";
+                btor.innerText = " ";
+                tret.innerText = " ";
+                perv1.innerText = " ";
+                btor1.innerText = " ";
+                tret1.innerText = " ";
+                chet1.innerText = " ";
+                piat1.innerText = " ";
+                chect1.innerText = " ";
+                rezul.innerText = " ";
+            }
+            else if(valu == "fiveteen"){
+                cym.innerText = ' ';
+                perv.innerText = " ";
+                btor.innerText = " ";
+                tret.innerText = " ";
+                perv1.innerText = " ";
+                btor1.innerText = " ";
+                tret1.innerText = " ";
+                chet1.innerText = " ";
+                piat1.innerText = " ";
+                chect1.innerText = " ";
+                rezul.innerText = " ";
+                chect1.innerText = " ";
+                piat1.innerText = " ";
+                nm.innerText = "S = AB * BC";
+                document.getElementById("treygopiskryg").style.width = '0px';
+                document.getElementById("fe").style.fontSize = '15px';
+                document.getElementById("nm").style.fontSize = '20px';
+                document.getElementById("kp").style.backgroundColor = 'black';
+                document.getElementById("kp").style.color = 'red';
+                document.getElementById("iu").style.backgroundColor = 'black';
+                document.getElementById("iu").style.color = 'red';
+                document.getElementById("ac").style.backgroundColor = 'black';
+                document.getElementById("ac").style.color = 'red';
+                document.getElementById("bf").style.backgroundColor = 'black';
+                document.getElementById("bf").style.color = 'red'
+                document.getElementById("bc").style.backgroundColor = 'white';
+                document.getElementById("bc").style.color = 'black';
+                document.getElementById("bykva").style.marginTop = '226px';
+                document.getElementById("imtreyg").style.width = '0px';
+                document.getElementById("fourpriam").style.width = '0px';
+                document.getElementById("kbadrat").style.width = '0px';
+                document.getElementById("priam").style.width = '250px';
+                document.getElementById("priam").style.marginTop = '520px';
+                document.getElementById("priam").style.marginLeft = '-300px';
+                document.getElementById("mnogokyt").style.width = '0px';
+                document.getElementById("ravnmnogoyg").style.width = '0px';
+                document.getElementById("plkvadrat").style.width = '0px';
+                document.getElementById("paralelogram").style.width = '0px';
+                document.getElementById("treygbusota").style.width = '0px';
+                document.getElementById("treygvpkryg").style.width = '0px';
+                fa.innerText = "AB";
+                fo.innerText = "BC";
+                fu.innerText = " ";
+                fy.innerText = " ";
+                fe.innerText = " ";
+                fi.innerText = " ";
+            }
+            else if(valu == "sixteen"){
+                nm.innerText = "S = BC * BK"; 
+                cym.innerText = ' ';
+                perv.innerText = " ";
+                btor.innerText = " ";
+                tret.innerText = " ";
+                perv1.innerText = " ";
+                btor1.innerText = " ";
+                tret1.innerText = " ";
+                chet1.innerText = " ";
+                piat1.innerText = " ";
+                chect1.innerText = " ";
+                rezul.innerText = " ";
+                chect1.innerText = " ";
+                piat1.innerText = " ";
+                document.getElementById("treygopiskryg").style.width = '0px';
+                document.getElementById("fe").style.fontSize = '15px';
+                document.getElementById("nm").style.fontSize = '20px';
+                document.getElementById("kp").style.backgroundColor = 'black';
+                document.getElementById("kp").style.color = 'red';
+                document.getElementById("iu").style.backgroundColor = 'black';
+                document.getElementById("iu").style.color = 'red';
+                document.getElementById("ac").style.backgroundColor = 'black';
+                document.getElementById("ac").style.color = 'red';
+                document.getElementById("bf").style.backgroundColor = 'black';
+                document.getElementById("bf").style.color = 'red'
+                document.getElementById("bc").style.backgroundColor = 'white';
+                document.getElementById("bc").style.color = 'black';
+                document.getElementById("bykva").style.marginTop = '226px';
+                document.getElementById("imtreyg").style.width = '0px';
+                document.getElementById("fourpriam").style.width = '0px';
+                document.getElementById("kbadrat").style.width = '0px';
+                document.getElementById("priam").style.width = '0px';
+                document.getElementById("mnogokyt").style.width = '0px';
+                document.getElementById("ravnmnogoyg").style.width = '0px';
+                document.getElementById("plkvadrat").style.width = '0px';
+                document.getElementById("paralelogram").style.width = '220px';
+                document.getElementById("paralelogram").style.marginTop = '540px';
+                document.getElementById("paralelogram").style.marginLeft = '-300px';
+                document.getElementById("treygbusota").style.width = '0px';
+                document.getElementById("treygvpkryg").style.width = '0px';
+                fa.innerText = "BC";
+                fo.innerText = "BK";
+                fu.innerText = " ";
+                fy.innerText = " ";
+                fe.innerText = " ";
+                fi.innerText = " ";
+            }
+            else {
+                nm.innerText = "Не вибрано формулу"; 
+                document.getElementById("nm").style.fontSize = '20px';
+                document.getElementById("treygopiskryg").style.width = '0px';
+                document.getElementById("fe").style.fontSize = '15px';
+                document.getElementById("ab").style.backgroundColor = 'white';
+                document.getElementById("ab").style.color = 'black';
+                document.getElementById("bc").style.backgroundColor = 'white';
+                document.getElementById("bc").style.color = 'black';
+                document.getElementById("bf").style.color = 'black';
+                document.getElementById("ac").style.backgroundColor = 'white';
+                document.getElementById("ac").style.color = 'black';
+                document.getElementById("bf").style.backgroundColor = 'white';
+                document.getElementById("bf").style.color = 'black';
+                document.getElementById("bf").style.border = 'black solid 1px';
+                document.getElementById("kp").style.backgroundColor = 'white';
+                document.getElementById("kp").style.color = 'black';
+                document.getElementById("kp").style.border = 'black solid 1px';
+                document.getElementById("iu").style.backgroundColor = 'white';
+                document.getElementById("iu").style.color = 'black';
+                document.getElementById("iu").style.border = 'black solid 1px';
+                fa.innerText = " ";
+                fo.innerText = " ";
+                fi.innerText = " ";
+                fe.innerText = " ";
+                rezul.innerText = " ";
+                perv.innerText = " ";
+                btor.innerText = " ";
+                tret.innerText = " ";
+                perv1.innerText = " ";
+                btor1.innerText = " ";
+                tret1.innerText = " ";
+                chet1.innerText = " ";
+                chect1.innerText = " ";
+                piat1.innerText = " ";
+                cym.innerText = " ";
+                document.getElementById("imtreyg").style.width = '0px';
+                document.getElementById("fourpriam").style.width = '0px'
+                document.getElementById("kbadrat").style.width = '0px';
+                document.getElementById("priam").style.width = '0px';
+                document.getElementById("mnogokyt").style.width = '0px';
+                document.getElementById("ravnmnogoyg").style.width = '0px';
+                document.getElementById("plkvadrat").style.width = '0px';
+                document.getElementById("paralelogram").style.width = '0px';
+                document.getElementById("treygbusota").style.width = '0px';
+                document.getElementById("treygvpkryg").style.width = '0px';
+                document.getElementById("bykva").style.marginTop = '226px';
+            }
+        }
+        function obchisPerim(){
+            var r, c, k;
+            var x1 = frm.ab.value;
+            var y1 = frm.bc.value;
+            var z1 = frm.ac.value;
+            var a1 = frm.bf.value;
+            var c1 = frm.kp.value;
+            var b1 = frm.iu.value;
+
+            var x2 = Number(x1);
+            var y2 = Number(y1);
+            var z2 = Number(z1);
+            var a2 = Number(a1);
+            var c2 = Number(c1);
+            var b2 = Number(b1);
+            var x = parseFloat(x1);
+            var y = parseFloat(y1);
+            var z = parseFloat(z1);
+            var a = parseFloat(a1);
+            var c = parseFloat(c1);
+            var b = parseFloat(b1);
+            var valu = frm.formul.value;
+             
+            if(valu == "one"){
+                r = x + y + z;
+                var otbet1 = r.toFixed(2);
+                rezul.innerHTML = "<strong> Відповідь: </strong>" + otbet1 + " см.";
+                perv.innerText = x;
+                btor.innerText = y;
+                tret.innerText = z;
+                document.getElementById("perv").style.marginLeft = '106px';
+                document.getElementById("perv").style.marginTop = '-100px';
+                document.getElementById("perv").style.fontWeight = 'bold';
+                document.getElementById("btor").style.marginLeft = '245px';
+                document.getElementById("btor").style.marginTop = '-25px';
+                document.getElementById("btor").style.fontWeight = 'bold';
+                document.getElementById("tret").style.marginLeft = '155px';
+                document.getElementById("tret").style.marginTop = '68px';
+                document.getElementById("tret").style.fontWeight = 'bold';
+                document.getElementById("cym").style.marginLeft = '138px';
+                document.getElementById("cym").style.marginTop = '-90px';
+                document.getElementById("rezul").style.color = 'black';
+            } 
+            else if (valu == "two"){
+                k = x + y + z + a;
+                var otbet2 = k.toFixed(2);
+                rezul.innerHTML = "<strong> Відповідь: </strong>" + otbet2 + " см.";
+                perv1.innerText = x;
+                btor1.innerText = y;
+                tret1.innerText = z;
+                chet1.innerText = a;
+                document.getElementById("perv1").style.marginLeft = '-180px';
+                document.getElementById("perv1").style.marginTop = '550px';
+                document.getElementById("btor1").style.marginTop = '50px';
+                document.getElementById("btor1").style.marginLeft = '-286px';
+                document.getElementById("tret1").style.marginLeft = '-80px';
+                document.getElementById("tret1").style.marginTop = '-35px';
+                document.getElementById("chet1").style.marginLeft = '-175px';
+                document.getElementById("chet1").style.marginTop = '60px';
+                document.getElementById("rezul").style.color = 'black';
+            }
+            else if (valu == "three"){
+                var m = x * 4;
+                var otbet3 = m.toFixed(2);
+                perv1.innerText = x;
+                btor1.innerText = x;
+                tret1.innerText = x;
+                chet1.innerText = x;
+                document.getElementById("kbadrat").style.marginLeft = '-280px';
+                document.getElementById("perv1").style.marginLeft = '-310px';
+                document.getElementById("perv1").style.marginTop = '615px';
+                document.getElementById("perv1").style.fontWeight = 'bold';
+                document.getElementById("btor1").style.marginLeft = '-187px';
+                document.getElementById("btor1").style.marginTop = '-145px';
+                document.getElementById("btor1").style.fontWeight = 'bold';
+                document.getElementById("tret1").style.marginLeft = '-63px';
+                document.getElementById("tret1").style.marginTop = '90px';
+                document.getElementById("tret1").style.fontWeight = 'bold';
+                document.getElementById("chet1").style.marginLeft = '-187px';
+                document.getElementById("chet1").style.fontWeight = 'bold';
+                document.getElementById("chet1").style.marginTop = '80px';
+                document.getElementById("rezul").style.color = 'black';
+                rezul.innerHTML = "<strong> Відповідь: </strong>" + otbet3 + " см.";
+            }
+            else if(valu == "four"){
+                var q = (x + y) * 2;
+                var otbet4 = q.toFixed(2);
+                perv1.innerText = x;
+                btor1.innerText = y;
+                tret1.innerText = x;
+                chet1.innerText = y;
+                rezul.innerHTML = "<strong> Відповідь: </strong>" + otbet4 + " см.";
+                document.getElementById("perv1").style.marginLeft = '-325px';
+                document.getElementById("perv1").style.marginTop = '595px';
+                document.getElementById("perv1").style.fontWeight = 'bold';
+                document.getElementById("btor1").style.marginLeft = '-187px';
+                document.getElementById("btor1").style.marginTop = '-125px';
+                document.getElementById("btor1").style.fontWeight = 'bold';
+                document.getElementById("tret1").style.marginLeft = '-43px';
+                document.getElementById("tret1").style.marginTop = '75px';
+                document.getElementById("tret1").style.fontWeight = 'bold';
+                document.getElementById("chet1").style.marginLeft = '-187px';
+                document.getElementById("chet1").style.fontWeight = 'bold';
+                document.getElementById("chet1").style.marginTop = '85px';
+                document.getElementById("rezul").style.color = 'black';
+            }
+            else if(valu == "five"){
+                var re1 = x + y +a + b + c + z;
+                var otbet5 = re1.toFixed(2);
+                perv1.innerText = x;
+                btor1.innerText = y;
+                tret1.innerText = z;
+                chet1.innerText = a;
+                piat1.innerText = c;
+                chect1.innerText = b;
+                rezul.innerHTML = "<strong> Відповідь: </strong>" + otbet5 + " см.";
+                document.getElementById("perv1").style.marginLeft = '-305px';
+                document.getElementById("perv1").style.marginTop = '565px';
+                document.getElementById("perv1").style.fontWeight = 'bold';
+                document.getElementById("btor1").style.marginLeft = '-200px';
+                document.getElementById("btor1").style.marginTop = '-85px';
+                document.getElementById("btor1").style.fontWeight = 'bold';
+                document.getElementById("tret1").style.marginLeft = '-88px';
+                document.getElementById("tret1").style.marginTop = '0px';
+                document.getElementById("tret1").style.fontWeight = 'bold';
+                document.getElementById("chet1").style.marginLeft = '-80px';
+                document.getElementById("chet1").style.fontWeight = 'bold';
+                document.getElementById("chet1").style.marginTop = '75px';
+                document.getElementById("piat1").style.marginLeft = '-170px';
+                document.getElementById("piat1").style.fontWeight = 'bold';
+                document.getElementById("piat1").style.marginTop = '10px';
+                document.getElementById("chect1").style.marginLeft = '-290px';
+                document.getElementById("chect1").style.fontWeight = 'bold';
+                document.getElementById("chect1").style.marginTop = '-60px';
+                document.getElementById("rezul").style.color = 'black';
+            }
+            else if(valu == "six"){
+                var re2 = x * 6;
+                var otbet6 = re2.toFixed(2);
+                perv1.innerText = x;
+                btor1.innerText = x;
+                tret1.innerText = x;
+                chet1.innerText = x;
+                piat1.innerText = x;
+                chect1.innerText = x;
+                rezul.innerHTML = "<strong> Відповідь: </strong>" + otbet6 + " см.";
+                document.getElementById("perv1").style.marginLeft = '-195px';
+                document.getElementById("perv1").style.marginTop = '540px';
+                document.getElementById("perv1").style.fontWeight = 'bold';
+                document.getElementById("btor1").style.marginLeft = '-120px';
+                document.getElementById("btor1").style.marginTop = '25px';
+                document.getElementById("btor1").style.fontWeight = 'bold';
+                document.getElementById("tret1").style.marginLeft = '-120px';
+                document.getElementById("tret1").style.marginTop = '60px';
+                document.getElementById("tret1").style.fontWeight = 'bold';
+                document.getElementById("chet1").style.marginLeft = '-192px';
+                document.getElementById("chet1").style.marginTop = '20px';
+                document.getElementById("chet1").style.fontWeight = 'bold';
+                document.getElementById("piat1").style.marginLeft = '-270px';
+                document.getElementById("piat1").style.marginTop = '-73px';
+                document.getElementById("piat1").style.fontWeight = 'bold';
+                document.getElementById("chect1").style.marginLeft = '-270px';
+                document.getElementById("chect1").style.marginTop = '-110px';
+                document.getElementById("chect1").style.fontWeight = 'bold';
+                document.getElementById("rezul").style.color = 'black';
+            }
+            else if(valu == "seven"){
+                r = (x + y + z) / 2;
+                var dav = Math.sqrt(r * (r - x) * (r - y) * (r - z));
+                var otbet7 = dav.toFixed(2);
+                rezul.innerHTML = "<strong> Відповідь: </strong>" + otbet7 + " см².";
+                perv.innerText = x;
+                btor.innerText = y;
+                tret.innerText = z;
+                document.getElementById("perv").style.marginLeft = '106px';
+                document.getElementById("perv").style.marginTop = '-100px';
+                document.getElementById("perv").style.fontWeight = 'bold';
+                document.getElementById("btor").style.marginLeft = '245px';
+                document.getElementById("btor").style.marginTop = '-25px';
+                document.getElementById("btor").style.fontWeight = 'bold';
+                document.getElementById("tret").style.marginLeft = '155px';
+                document.getElementById("tret").style.marginTop = '68px';
+                document.getElementById("tret").style.fontWeight = 'bold';
+                document.getElementById("cym").style.marginLeft = '138px';
+                document.getElementById("cym").style.marginTop = '-90px';
+                document.getElementById("rezul").style.color = 'black';
+                document.getElementById("rezul").style.color = 'black';
+            }
+            else if (valu == "twenty"){
+                var nb = y * x ;
+                var otbet28 = nb.toFixed(2);
+                document.getElementById("rezul").style.color = 'black';
+                rezul.innerHTML = "<strong> Відповідь: </strong>" + otbet28 + " см².";
+            }
+            else if(valu == "nine"){
+                var nb2 = (x + y + z) / 2;
+                var nb1 = nb2 * a;
+                var on1 = nb1.toFixed(2);
+                var otbet9 = on1;
+                document.getElementById("rezul").style.color = 'black';
+                rezul.innerHTML = "<strong> Відповідь: </strong>" + otbet9 + " см².";
+            }
+            else if(valu == "ten"){
+                var moon = x * y * z;
+                var moon2 = 4 * a;
+                var moon3 = moon / moon2;
+                var otbet10 = moon3.toFixed(2);
+                document.getElementById("rezul").style.color = 'black';
+                rezul.innerHTML = "<strong> Відповідь: </strong>" + otbet10 + " см².";
+            }
+            else if(valu == "thirteen"){
+                var m = x * x;
+                var otbet13 = m.toFixed(2);
+                perv1.innerText = x;
+                btor1.innerText = x;
+                tret1.innerText = x;
+                chet1.innerText = x;
+                document.getElementById("kbadrat").style.marginLeft = '-280px';
+                document.getElementById("perv1").style.marginLeft = '-310px';
+                document.getElementById("perv1").style.marginTop = '615px';
+                document.getElementById("perv1").style.fontWeight = 'bold';
+                document.getElementById("btor1").style.marginLeft = '-187px';
+                document.getElementById("btor1").style.marginTop = '-145px';
+                document.getElementById("btor1").style.fontWeight = 'bold';
+                document.getElementById("tret1").style.marginLeft = '-63px';
+                document.getElementById("tret1").style.marginTop = '90px';
+                document.getElementById("tret1").style.fontWeight = 'bold';
+                document.getElementById("chet1").style.marginLeft = '-187px';
+                document.getElementById("chet1").style.fontWeight = 'bold';
+                document.getElementById("chet1").style.marginTop = '80px';
+                document.getElementById("rezul").style.color = 'black';
+                rezul.innerHTML = "<strong> Відповідь: </strong>" + otbet13 + " см².";
+            }
+            else if(valu == "fourteen"){
+                var re141 = x * x;
+                var re14 = re141 / 2;
+                var otbet14 = re14.toFixed(2);
+                rezul.innerHTML = "<strong> Відповідь: </strong>" + otbet14 + " см².";
+                document.getElementById("rezul").style.color = 'black';
+            }
+            else if(valu == "fiveteen"){
+                var q = x * y;
+                var otbet15 = q.toFixed(2);
+                perv1.innerText = x;
+                btor1.innerText = y;
+                tret1.innerText = x;
+                chet1.innerText = y;
+                document.getElementById("rezul").style.color = 'black';
+                rezul.innerHTML = "<strong> Відповідь: </strong>" + otbet15 + " см².";
+                document.getElementById("perv1").style.marginLeft = '-325px';
+                document.getElementById("perv1").style.marginTop = '595px';
+                document.getElementById("perv1").style.fontWeight = 'bold';
+                document.getElementById("btor1").style.marginLeft = '-187px';
+                document.getElementById("btor1").style.marginTop = '-125px';
+                document.getElementById("btor1").style.fontWeight = 'bold';
+                document.getElementById("tret1").style.marginLeft = '-43px';
+                document.getElementById("tret1").style.marginTop = '75px';
+                document.getElementById("tret1").style.fontWeight = 'bold';
+                document.getElementById("chet1").style.marginLeft = '-187px';
+                document.getElementById("chet1").style.fontWeight = 'bold';
+                document.getElementById("chet1").style.marginTop = '85px';
+            }
+            else if (valu == "sixteen"){
+                var q1 = x * y;
+                var otbet16 = q1.toFixed(2);
+                document.getElementById("rezul").style.color = 'black';
+                rezul.innerHTML = "<strong> Відповідь: </strong>" + otbet16 + " см².";
+            }
+            else{ 
+                c = "Не вибрано формулу";
+                document.getElementById("rezul").style.color = 'black';
+                rezul.innerText = c ;
+            }
+        }
+        document.getElementById("but").onclick = function(e) {
+            document.getElementById("ab").value = "";
+            document.getElementById("bc").value = "";
+            document.getElementById("ac").value = "";
+            document.getElementById("bf").value = "";
+            document.getElementById("kp").value = "";
+            document.getElementById("iu").value = "";
+            rezul.innerText = " ";
+            cym.innerText = " ";
+            perv.innerText = " ";
+            btor.innerText = " ";
+            tret.innerText = " ";
+            perv1.innerText = " ";
+            chet1.innerText = " ";
+            tret1.innerText = " ";
+            btor1.innerText = " ";
+            piat1.innerText = " ";
+            chect1.innerText = " ";
+        }
+    </script>
+</body>
+</html>
