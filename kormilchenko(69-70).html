@@ -54,7 +54,6 @@
         }
         #kbadrat{
             width: 0px;
-            position: fixed;
         }
         #priam, #mnogokyt, #ravnmnogoyg, #plkvadrat, #paralelogram, #treygbusota, #treygvpkryg, #treygopiskryg{
             width: 0px;
@@ -98,6 +97,14 @@
         #one{
             margin-left: -15px;
         }
+        @media screen and (max-width: 500px) {
+            .obchi{
+                margin-left: 50px;
+            }
+            .zag{
+                margin-left: 170px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -116,8 +123,6 @@
                             <option id="grey" value="six" >Периметр рівностороннього багатокутника</option>
                             <option disabled></option>
                         </optgroup>
-                        <optgroup label="Площа:">
-                            <option disabled></option>
                             <optgroup label="Площа трикутника" class="pltreyg">
                                 <option id="white" value="seven">За формулою Герона</option>
                                 <option id="red" value="twenty">Площа трикутника за стороною та висотою</option>
@@ -134,7 +139,6 @@
                             <optgroup label="Площа паралелограма">
                                 <option id="red" value="sixteen">Площа паралелограма</option>
                             </optgroup>
-                        </optgroup>
                     </select>
                     <p class="nm" id="nm"> </p>
                     <br><input type="button" id="obrat" value="Вибрати формулу" onclick="textPerim()">
