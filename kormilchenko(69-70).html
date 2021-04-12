@@ -7,8 +7,10 @@
     <title>Kormilchenko</title>
     <style>
         .nm{
-            width: 330px;
+            width: 350px;
             text-align: center;
+            box-shadow:rgb(119, 119, 119) 4px 2px 23px ;
+            border-radius: 10px;
         }
         .hr{
             margin-left: 0;
@@ -17,11 +19,18 @@
         }
         .obchi{
             border: black solid 2px;
-            height: 650px;
+            height: 700px;
             width: 350px;
             padding: 20px;
             border-radius: 20px;
-            margin-left: 720px;
+            box-shadow: gray 2px 6px 30px;
+        }
+        .obrat, .b1b, #but {
+            color:black; 
+    	    background:#dfdfdfc7;
+            border-radius: 10px;
+            padding: 4px;
+            border: black solid 1px;
         }
         .treyg{
             width: 0px;
@@ -61,7 +70,8 @@
         .zag{
             font-size: 20px;
             font-weight: bold;
-            margin-left: 860px;
+            text-align: center;
+            font-family: 'Comfortaa', cursive;
         }
         body{
             display: flex;
@@ -75,141 +85,152 @@
             margin-top: 180px;
             margin-left: -50px;
             padding: 5px;
+            background-color: rgba(156, 156, 156, 0.507);
+            text-align: center;
         }
         #fa{
             margin-top: 2px;
+            font-weight: bold;
         }
         #fo{
             margin-top: 13px;
+            font-weight: bold;
         }
         #fi{
             margin-top: 20px;
+            font-weight: bold;
         }
         #fe{
             margin-top: 3px;
+            font-weight: bold;
         }
         #fu{
             margin-top: 20px;
+            font-weight: bold;
         }
         #fy{
             margin-top: 17px;
+            font-weight: bold;
         }
         #one{
             margin-left: -15px;
         }
-        @media screen and (max-width: 700px) {
-            .obchi{
-                margin-left: 0px;
-            }
-            .zag{
-                margin-left: 170px;
-            }
+        .box{
+            display: flex;
+            flex-direction: row;
+            margin: auto;
         }
-        
+        .onectr, .twoctr, .threectr, .fourctr, .fivectr, .sixctr {
+            font-weight: bold;
+        }
     </style>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-        <div class="perim">
-            <p class="zag">Калькулятор</p>
-            <div class="obchi">
-                <form name="frm">
-                    <select name="formul" id="one">
-                        <option id="bisque" value="zero" >За умовчанням</option>
-                        <optgroup label="Периметр">
-                            <option id="white" value="one"> Периметр трикутника</option>
-                            <option id="red" value="two">Периметр довільного чотирикутника</option>
-                            <option id="green" value="three">Периметр квадрата</option>
-                            <option id="blue" value="four">Периметр прямокутика</option>
-                            <option id="grey" value="five" >Периметр багатокутника</option>
-                            <option id="grey" value="six" >Периметр рівностороннього багатокутника</option>
-                            <option disabled></option>
-                        </optgroup>
-                            <optgroup label="Площа трикутника" class="pltreyg">
-                                <option id="white" value="seven">За формулою Герона</option>
-                                <option id="red" value="twenty">Площа трикутника за стороною та висотою</option>
-                                <option id="green" value="nine">Площа за півпериметром і радіусом вписаного кола</option>
-                                <option id="red" value="ten">Площа за трьома сторонами і радіусом описаного кола</option>
+        <div class="box">
+            <div class="perim">
+                <div class="obchi">
+                    <p class="zag">Калькулятор</p>
+                    <form name="frm">
+                        <select name="formul" id="one">
+                            <option id="bisque" value="zero" >За умовчанням</option>
+                            <optgroup label="Периметр">
+                                <option id="white" value="one"> Периметр трикутника</option>
+                                <option id="red" value="two">Периметр довільного чотирикутника</option>
+                                <option id="green" value="three">Периметр квадрата</option>
+                                <option id="blue" value="four">Периметр прямокутика</option>
+                                <option id="grey" value="five" >Периметр багатокутника</option>
+                                <option id="grey" value="six" >Периметр рівностороннього багатокутника</option>
+                                <option disabled></option>
                             </optgroup>
-                            <optgroup label="Площа квадрата" class="pltreyg">
-                                <option id="white" value="thirteen">Площа квадрата за довжиною сторони</option>
-                                <option id="red" value="fourteen">Площа квадрата за довжиною діагоналі</option>
-                            </optgroup>
-                            <optgroup label="Площа прямокутника">
-                                <option id="red" value="fiveteen">Площа прямокутника</option>
-                            </optgroup>
-                            <optgroup label="Площа паралелограма">
-                                <option id="red" value="sixteen">Площа паралелограма</option>
-                            </optgroup>
-                    </select>
-                    <p class="nm" id="nm"> </p>
-                    <br><input type="button" id="obrat" value="Вибрати формулу" onclick="textPerim()">
-                    <hr class="hr">
-                    <p class="onectr"> Перша сторона 
-                        <input type="text" name="ab" id="ab" placeholder="Введіть розмір сторони." style="margin-left: 15px;">
-                    </p>
-                    <p class="twoctr"> Друга сторона 
-                        <input type="text" name="bc" id="bc" placeholder="Введіть розмір сторони." style="margin-left: 20px; "> 
-                    </p>
-                    <p class="threectr"> Третя сторона 
-                        <input type="text" name="ac" id="ac" placeholder="Введіть розмір сторони." style="margin-left: 23px;"> 
-                    </p>
-                    <p class="fourctr"> Четверта сторона 
-                        <input type="text" name="bf" id="bf" placeholder="Введіть розмір сторони." > 
-                    </p>
-                    <p class="fivectr"> П'ята сторона 
-                        <input type="text" name="kp" id="kp" placeholder="Введіть розмір сторони." style="margin-left: 24px;">
-                    </p>
-                    <p class="sixctr"> Шоста сторона  
-                        <input type="text" name="bff" id="iu" placeholder="Введіть розмір сторони." style="margin-left: 15px;">
-                    </p>
-                    <input type="button" name="" id="" value="Вивести результат" onclick="obchisPerim()">
-                    <input type="button" id="but" value="Очистити">
-                    <p id="rezul" class="rezul"></p>
-                    <img src="треугольник.jpg" id="imtreyg" alt="" class="treyg">
-                    <p class="perv" id="perv"></p>
-                    <p class="btor" id="btor"></p>
-                    <p class="tret" id="tret"></p>
-                    <p id="chet"></p>
-                    <p class="cym" id="cym"></p>
-                    </form> 
+                                <optgroup label="Площа трикутника" class="pltreyg">
+                                    <option id="white" value="seven">За формулою Герона</option>
+                                    <option id="red" value="twenty">Площа трикутника за стороною та висотою</option>
+                                    <option id="green" value="nine">Площа за півпериметром і радіусом вписаного кола</option>
+                                    <option id="red" value="ten">Площа за трьома сторонами і радіусом описаного кола</option>
+                                </optgroup>
+                                <optgroup label="Площа квадрата" class="pltreyg">
+                                    <option id="white" value="thirteen">Площа квадрата за довжиною сторони</option>
+                                    <option id="red" value="fourteen">Площа квадрата за довжиною діагоналі</option>
+                                </optgroup>
+                                <optgroup label="Площа прямокутника">
+                                    <option id="red" value="fiveteen">Площа прямокутника</option>
+                                </optgroup>
+                                <optgroup label="Площа паралелограма">
+                                    <option id="red" value="sixteen">Площа паралелограма</option>
+                                </optgroup>
+                        </select>
+                        <p class="nm" id="nm"> </p>
+                        <br><input type="button" id="obrat"  class="obrat" value="Вибрати формулу" onclick="textPerim()">
+                        <hr class="hr">
+                        <p class="onectr"> Перша сторона 
+                            <input type="text" name="ab" id="ab" placeholder="Введіть розмір сторони." style="margin-left: 17px;">
+                        </p>
+                        <p class="twoctr"> Друга сторона 
+                            <input type="text" name="bc" id="bc" placeholder="Введіть розмір сторони." style="margin-left: 24px; "> 
+                        </p>
+                        <p class="threectr"> Третя сторона 
+                            <input type="text" name="ac" id="ac" placeholder="Введіть розмір сторони." style="margin-left: 25px;"> 
+                        </p>
+                        <p class="fourctr"> Четверта сторона 
+                            <input type="text" name="bf" id="bf" placeholder="Введіть розмір сторони." > 
+                        </p>
+                        <p class="fivectr"> П'ята сторона 
+                            <input type="text" name="kp" id="kp" placeholder="Введіть розмір сторони." style="margin-left: 26px;">
+                        </p>
+                        <p class="sixctr"> Шоста сторона  
+                            <input type="text" name="bff" id="iu" placeholder="Введіть розмір сторони." style="margin-left: 18px;">
+                        </p>
+                        <input type="button" name="" id=""class="b1b" value="Вивести результат" onclick="obchisPerim()">
+                        <input type="button" id="but" value="Очистити">
+                        <p id="rezul" class="rezul"></p>
+                        <img src="треугольник.jpg" id="imtreyg" alt="" class="treyg">
+                        <p class="perv" id="perv"></p>
+                        <p class="btor" id="btor"></p>
+                        <p class="tret" id="tret"></p>
+                        <p id="chet"></p>
+                        <p class="cym" id="cym"></p>
+                        </form> 
+                </div>
+            </div> 
+            <div id="bykva">
+                <p id="fa"></p>
+                <p id="fo"></p>
+                <p id="fi"></p>
+                <p id="fe"></p>
+                <p id="fu"></p>
+                <p id="fy"></p>
             </div>
-        </div> 
-        <div id="bykva">
-            <p id="fa"></p>
-            <p id="fo"></p>
-            <p id="fi"></p>
-            <p id="fe"></p>
-            <p id="fu"></p>
-            <p id="fy"></p>
-        </div>
-        <div style="margin-bottom: 200px;">
-            <img src="довчотирикутник.jpg" alt="" id="fourpriam">  
-        </div>
-            <div> <img src="квадрат.jpg" alt="" id="kbadrat"> </div>
-            <div><img src="прямоугольник.jpg" alt="" id="priam"></div>
-            <div><img src="многоугольник.jpg" alt="" id="mnogokyt"></div>
-            <div><img src="равнмногоугольник.jpg" alt="" id="ravnmnogoyg"></div>
-            <div> <img src="площадьквадрата.jpg" alt="" id="plkvadrat"> </div>
-            <div> <img src="паралелограм.jpg" alt="" id="paralelogram"> </div>
-            <div> <img src="треугольник+высота.jpg" alt="" id="treygbusota"> </div>
-            <div> <img src="треугольник+впкруг.jpg" alt="" id="treygvpkryg"> </div>
-            <div> <img src="треугольник+опкруг.jpg" alt="" id="treygopiskryg"> </div>
-            <div> <img src="" alt="" id=""> </div>
-            <div> <img src="" alt="" id=""> </div>
-            <div> <img src="" alt="" id=""> </div>
-            <div> <img src="" alt="" id=""> </div>
-            <div> <img src="" alt="" id=""> </div>
-            <div> <img src="" alt="" id=""> </div>
-            <div> <img src="" alt="" id=""> </div>
-            <div> <img src="" alt="" id=""> </div>
-        <div>
-            <p class="perv1" id="perv1"></p>
-            <p class="btor1" id="btor1"></p>
-            <p class="tret1" id="tret1"></p>
-            <p class="chet1" id="chet1"></p>
-            <p id="piat1"></p>
-            <p id="chect1"></p>
-        </div>
+            <div style="margin-bottom: 200px;">
+                <img src="довчотирикутник.jpg" alt="" id="fourpriam">  
+            </div>
+                <div> <img src="квадрат.jpg" alt="" id="kbadrat"> </div>
+                <div><img src="прямоугольник.jpg" alt="" id="priam"></div>
+                <div><img src="многоугольник.jpg" alt="" id="mnogokyt"></div>
+                <div><img src="равнмногоугольник.jpg" alt="" id="ravnmnogoyg"></div>
+                <div> <img src="площадьквадрата.jpg" alt="" id="plkvadrat"> </div>
+                <div> <img src="паралелограм.jpg" alt="" id="paralelogram"> </div>
+                <div> <img src="треугольник+высота.jpg" alt="" id="treygbusota"> </div>
+                <div> <img src="треугольник+впкруг.jpg" alt="" id="treygvpkryg"> </div>
+                <div> <img src="треугольник+опкруг.jpg" alt="" id="treygopiskryg"> </div>
+                <div> <img src="" alt="" id=""> </div>
+                <div> <img src="" alt="" id=""> </div>
+                <div> <img src="" alt="" id=""> </div>
+                <div> <img src="" alt="" id=""> </div>
+                <div> <img src="" alt="" id=""> </div>
+                <div> <img src="" alt="" id=""> </div>
+                <div> <img src="" alt="" id=""> </div>
+                <div> <img src="" alt="" id=""> </div>
+            <div>
+                <p class="perv1" id="perv1"></p>
+                <p class="btor1" id="btor1"></p>
+                <p class="tret1" id="tret1"></p>
+                <p class="chet1" id="chet1"></p>
+                <p id="piat1"></p>
+                <p id="chect1"></p>
+            </div>
+    </div>
     <script>
         function textPerim() {
             var valu = frm.formul.value;
@@ -570,7 +591,7 @@
                 chet.innerText = " ";
             }
             else if(valu == "twenty"){
-                nm.innerHTML = "S = AC * BK";
+                nm.innerHTML = "S = 1/2 * AC * BK";
                 document.getElementById("nm").style.fontSize = '20px';
                 document.getElementById("treygopiskryg").style.width = '0px';
                 document.getElementById("fe").style.fontSize = '15px';
@@ -1156,7 +1177,7 @@
                 document.getElementById("rezul").style.color = 'black';
             }
             else if (valu == "twenty"){
-                var nb = y * x ;
+                var nb = (y * x) / 2 ;
                 var otbet28 = nb.toFixed(2);
                 document.getElementById("rezul").style.color = 'black';
                 rezul.innerHTML = "<strong> Відповідь: </strong>" + otbet28 + " см².";
